@@ -11,85 +11,85 @@ function prioritySort(array, dataPriority) {
 
     var result = [];
 
-	for(var i = 0; i < dataPriority.length; i++){
-		
-		var a = dataPriority[i];
+    for(var i = 0; i < dataPriority.length; i++){
+        
+        var a = dataPriority[i];
 
-		var midResult = [];
+        var midResult = [];
 
-		switch (a) {
-  		
-  		case 'number':
-		    midResult = typeArr('number', array);
-		    
-		    for(var j = 0; j < midResult.length; j++){
-		    	result.push(midResult[j]);
-		    }
-		    
-		    break;
+        switch (a) {
+        
+        case 'number':
+            midResult = typeArr('number', array);
+            
+            for(var j = 0; j < midResult.length; j++){
+                result.push(midResult[j]);
+            }
+            
+            break;
 
-  		case 'null':
-		    result.push(null);
-		    break;
-  		
-  		case 'string':
-  			midResult = typeArr('string', array);
-		    
-		    midResult.sort();
-		    
-		    for(j = 0; j < midResult.length; j++) {
-		        result.push(midResult[j]);
-		    }
-		    
-		    break;
-		    
-		case 'object':
-		    midResult = typeArr('object', array);
-		    
-		    for(j = 0; j < midResult.length; j++){
-		    	if(midResult[j] !== null) {
-		    		result.push(midResult[j]);
-		    	}
-		    }
-		    
-			break;
+        case 'null':
+            result.push(null);
+            break;
+        
+        case 'string':
+            midResult = typeArr('string', array);
+            
+            midResult.sort();
+            
+            for(j = 0; j < midResult.length; j++) {
+                result.push(midResult[j]);
+            }
+            
+            break;
+            
+        case 'object':
+            midResult = typeArr('object', array);
+            
+            for(j = 0; j < midResult.length; j++){
+                if(midResult[j] !== null) {
+                    result.push(midResult[j]);
+                }
+            }
+            
+            break;
 
-		case 'undefined':
-		    result.push(undefined);
-		    break;
-		  
-		case 'boolean':
-		    midResult = typeArr('boolean', array);
-		    
-		    function compareNumeric(a, b) {
-				if (a > b) return -1;
-				if (a < b) return 1;
-			}
+        case 'undefined':
+            result.push(undefined);
+            break;
+          
+        case 'boolean':
+            midResult = typeArr('boolean', array);
+            
+            function compareNumeric(a, b) {
+                if (a > b) return -1;
+                if (a < b) return 1;
+            }
 
-		    midResult.sort(compareNumeric);
+            midResult.sort(compareNumeric);
 
-		    for(j = 0; j < midResult.length; j++) {
-		        result.push(midResult[j]);
-		    }
+            for(j = 0; j < midResult.length; j++) {
+                result.push(midResult[j]);
+            }
 
-		    break;
-	  	}   
-	}    
+            break;
+        }   
+    }    
 
-	function typeArr(type, arr) {
-	  
-		var result = [];
-	  
-	    for(var i = 0; i < arr.length; i++) {
-	      
-	    	if(typeof arr[i] === type) {
-	    		result.push(arr[i]);
-	      }
-	    }
-    	
-    	return result;
-	}
+    function typeArr(type, arr) {
+      
+        var result = [];
+      
+        for(var i = 0; i < arr.length; i++) {
+          
+            if(typeof arr[i] === type) {
+                result.push(arr[i]);
+          }
+        }
+        
+        return result;
+    }
 
-	return result;
+    return result;
 
 }
