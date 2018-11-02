@@ -1,0 +1,92 @@
+html, body {
+    height: calc(100% - 5px);
+    font-size: 25px;
+    color: white;
+}
+
+.header {
+    background-color: #afab00;
+	text-align: center;
+    line-height: 100px;
+    height: 100px;
+}
+
+.container {
+	display: flex;
+	height: calc(100% - 200px);
+}
+
+.footer {
+    background-color: #af0036;
+	text-align: center;
+    line-height: 100px;
+    height: 100px;
+}
+
+.sidebar {
+    background-color: #3737be;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+}
+
+.content {
+	width: calc(100% - 100px);
+	background-color: #af4b00;
+}
+
+.main-content {
+	width: 100%;
+    background-color: #af4b00;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 100px);
+}
+
+.other-content {
+
+    background-color: #49af00;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.custom-style::after {
+	content: '';
+	widows: 20px;
+	height: 20px;
+	background-color: white;
+}
+
+input {
+	display: none;
+}
+
+label:hover {
+	cursor: pointer;
+}
+
+label::after {
+	display: inline-block;
+	content: '';
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	margin-left: 10px;
+	border: 1px solid black;
+}
+
+.checkbox-container:hover input:not(:checked) + label::after {
+	background-color: grey;
+}
+
+input:checked + label::after {
+	background-image: url(http://www.defaulticon.com/images/icons32x32/check.png?itok=uIbisEaZ);
+	background-size: 100%;
+	background-color: grey;
+}
