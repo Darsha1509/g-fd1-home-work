@@ -81,11 +81,11 @@ label::after {
 	border: 1px solid black;
 }
 
-.checkbox-container:hover input:not(:checked) + label::after {
+.checkbox-container:hover input:not(:checked) ~ label::after {
 	background-color: grey;
 }
 
-input:checked + label::after {
+input:checked ~ label::after {
 	background-image: url(http://www.defaulticon.com/images/icons32x32/check.png?itok=uIbisEaZ);
 	background-size: 100%;
 	background-color: grey;
