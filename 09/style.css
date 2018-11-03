@@ -6,26 +6,26 @@ html, body {
 
 .header {
     background-color: #afab00;
-	text-align: center;
+    text-align: center;
     line-height: 100px;
     height: 100px;
 }
 
 .container {
-	display: flex;
-	height: calc(100% - 200px);
+    display: flex;
+    height: calc(100% - 200px);
 }
 
 .footer {
     background-color: #af0036;
-	text-align: center;
+    text-align: center;
     line-height: 100px;
     height: 100px;
 }
 
 .sidebar {
     background-color: #3737be;
-	display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -34,14 +34,14 @@ html, body {
 }
 
 .content {
-	width: calc(100% - 100px);
-	background-color: #af4b00;
+    width: calc(100% - 100px);
+    background-color: #af4b00;
 }
 
 .main-content {
-	width: 100%;
+    width: 100%;
     background-color: #af4b00;
-	display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -57,36 +57,36 @@ html, body {
 }
 
 .custom-style::after {
-	content: '';
-	widows: 20px;
-	height: 20px;
-	background-color: white;
+    content: '';
+    widows: 20px;
+    height: 20px;
+    background-color: white;
 }
 
 input {
-	display: none;
+    display: none;
 }
 
 label:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 label::after {
-	display: inline-block;
-	content: '';
-	width: 20px;
-	height: 20px;
-	background-color: white;
-	margin-left: 10px;
-	border: 1px solid black;
+    display: inline-block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    margin-left: 10px;
+    border: 1px solid black;
 }
 
 .checkbox-container:hover input:not(:checked) ~ label::after {
-	background-color: grey;
+    background-color: grey;
 }
 
 input:checked ~ label::after {
-	background-image: url(http://www.defaulticon.com/images/icons32x32/check.png?itok=uIbisEaZ);
-	background-size: 100%;
-	background-color: grey;
+    background-image: url(http://www.defaulticon.com/images/icons32x32/check.png?itok=uIbisEaZ);
+    background-size: 100%;
+    background-color: grey;
 }
