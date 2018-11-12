@@ -1,0 +1,60 @@
+body {
+    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/extra_clean_paper.png);
+}
+
+.slides {
+    width: 608px;
+    height: 342px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    overflow: hidden;
+
+    transition: .2s;
+
+    display: flex;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+        display: block;
+        margin: 20px;
+        width: 100px;
+        height: 50px;
+        background: url(https://www.toptal.com/designers/subtlepatterns/patterns/extra_clean_paper.png);
+        cursor: pointer;
+        border-radius: 15%;
+        box-shadow:  0 3px 20px rgba(0,0,0,.25),
+    inset 0 2px 0 rgba(255,255,255,.6),
+    0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1);
+}
+
+.button:hover {
+    box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+    0 2px 0 rgba(255,255,255,.4), inset
+    0 2px 0 rgba(0,0,0,.1);
+}
+
+.button::after {
+    content: '';
+    width: 100px;
+    height: 50px;
+    display: block;
+    opacity: .7;
+}
+
+.btn-previous::after {
+    background: url(http://www.defaulticon.com/images/icons32x32/arrow-8-left_0.png?itok=VYuBwoCp) center no-repeat;
+}
+
+.btn-next::after {
+    background: url(http://www.defaulticon.com/images/icons32x32/arrow-8-right_0.png?itok=uaDAG6hN) center no-repeat;
+}
+
+
+
