@@ -5,7 +5,10 @@ document.querySelectorAll('.slides').forEach(function (element) {
     var button_next = document.querySelector('.btn-next');
 
     button_next.onclick = function () {
-        currentPosition += slideSize;
+        
+        if (currentPosition != 2432) {
+            currentPosition += slideSize;
+        }
 
         element.scroll({left: currentPosition, behavior: 'smooth'});
     };
@@ -13,7 +16,10 @@ document.querySelectorAll('.slides').forEach(function (element) {
     var button_previous = document.querySelector('.btn-previous');
 
     button_previous.onclick = function () {
-        currentPosition -= slideSize;
+        
+        if (currentPosition != 0) {
+            currentPosition -= slideSize;
+        }
 
         element.scroll({left: currentPosition, behavior: 'smooth'});
     };
