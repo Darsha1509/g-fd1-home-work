@@ -4,9 +4,11 @@ document.querySelectorAll('.slides').forEach(function (element) {
 
     var button_next = document.querySelector('.btn-next');
 
+    var maxPosition = (document.querySelectorAll('.slide').length-1) * slideSize;
+
     button_next.onclick = function () {
         
-        if (currentPosition != 2432) {
+        if (currentPosition < maxPosition) {
             currentPosition += slideSize;
         }
 
