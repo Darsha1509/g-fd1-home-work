@@ -1,0 +1,31 @@
+extends ./_template.pug
+block container
+    include _navbar.pug
+    .row
+        .col-3
+            nav
+                ul.nav.flex-column
+                    include _menu-item.pug
+                    +item(navItems[0].href, navItems[0].name)
+                    +item(navItems[1].href, navItems[1].name)
+                ul.nav.flex-column.pl-3
+                    | Pages:
+                    +item('/page/1.html', pages[0].name)
+                    +item('/page/2.html', pages[1].name)
+                    +item('/page/3.html', pages[2].name)
+        .col-9
+            - 
+                var pageName;
+                var miniContent;
+                var pageId;
+                for (var i = 0; i < pages.length; i++){
+                    pageName = pages[i].name;
+                    miniContent = pages[i].previewContent;
+                    pageId = pages[i].id;
+
+            .col.mt-2
+                h2.col= pageName
+                .col
+                    | #{miniContent}
+                    a.badge(href='/page/' + pageId +'.html') ...
+            -}
