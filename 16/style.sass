@@ -1,0 +1,27 @@
+$color-grey: #767676
+$color-black: #2d2d2d
+
+@mixin colorAndFontWeight($font-param, $color-param)
+    color: $color-param
+    font-weight: $font-param
+
+.radio
+    margin-left: 20px
+    color: $color-grey
+    &_clear
+        color: $color-black
+        & .voxy-radio__box
+            border-color: $color-black
+    &_question
+        margin-bottom: 1.5em
+        font-size: 24px
+        @include colorAndFontWeight(bold, $color-black)
+    &_options
+        display: flex
+        flex-direction: column
+        &-item
+            margin-bottom: 2em
+            font-size: 19px
+            align-items: flex-start
+            &__selected .radio_option-item-text
+                @include colorAndFontWeight(bold, $color-black)
