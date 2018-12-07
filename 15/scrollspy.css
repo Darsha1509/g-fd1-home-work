@@ -4,11 +4,11 @@
     padding: 20px;
 }
 
-.spy-items-container {
+.spy-container--items {
     margin-right: 20px;
 }
 
-.spy-items {
+.spy-container--itemsBlock {
     list-style-type: none;
     padding-left: 0;
     width: 150px;
@@ -20,7 +20,7 @@
     justify-content: space-around;
 }
 
-.spy-item {
+.spy-container--item {
     border-top: 1px solid rgba(0,0,0,.125);
     width: 100%;
     text-align: center;
@@ -30,15 +30,15 @@
     padding-bottom: auto;
 }
 
-.spy-item:hover {
+.spy-container--item:hover {
     background-color: #f1f1f1;
 }
 
-.spy-items:first-child {
+.spy-container--itemsBlock:first-child {
     border-top: 1px solid transparent;
 }
 
-.spy-content {
+.spy-container--content {
     height: 160px;
     overflow-y: scroll;
 }
