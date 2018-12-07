@@ -1,4 +1,4 @@
-document.querySelectorAll(".spy-item").forEach(function (item, i, listObj) {
+document.querySelectorAll(".spy-container--item").forEach(function (item, i, listObj) {
     
     item.onclick = function(){
         listObj.forEach(function (item, i, listObj) {
