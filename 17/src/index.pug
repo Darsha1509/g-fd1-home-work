@@ -1,0 +1,25 @@
+doctype html
+head
+  title= title
+  link(rel='stylesheet', href='/style/scrollspy.css')
+h1= name
+.spy-container
+    .spy-container--items
+        ul.spy-container--itemsBlock
+            -
+                for(var i = 0; i < navItems.length; i++) {
+            li.spy-container--item
+                a(href= navItems[i].href)= navItems[i].title 
+            -}
+
+    .spy-container--content
+        -
+            for(var i = 0; i < navItems.length; i++) {
+        h4(id= navItems[i].href.substring(1))= navItems[i].title
+        p= navItems[i].text
+        -}
+script(src='/js/main.js')
+            
+            
+             
+  
