@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title Home work 18
+        link(rel="stylesheet" type="text/css" href="/libs/reset-css/reset.css")
+        link(rel="stylesheet" type="text/css" href="/style/main.css")
+    body
+        div.navbar
+            div.nav-item(href="#home") Home
+            div.nav-item(href="#news") News
+
+            div.nav-item.dropdown(onclick="myFunction()") Dropdown
+
+            div.dropdown-content#myDropdown 
+                a(href="#") Link 1
+                a(href="#") Link 2
+                a(href="#") Link 3
+
+        script(src="/libs/jquery/jquery.js")
+        script(src="/libs/bootstrap/bootstrap.js")
+        script(src="/js/main.js")
+        script(src="/js/component/dropdown.js")

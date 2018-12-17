@@ -1,0 +1,19 @@
+{
+    "navItems": [
+        {
+            "title": "Item1"
+        },
+        {
+            "title": "Item2"
+        },
+        {
+            "title": "Item3"
+        },
+        {
+            "title": "Item4"
+        },
+        {
+            "title": "Item5"
+        }
+    ]
+}
